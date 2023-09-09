@@ -145,4 +145,23 @@ En esta capa, los medios de transmisión que se encuentran son:
 
 Proporciona sus servicios a la capa de red, suministrando un tránsito de datos confiable a través de un cable físico. Se ocupa del direccionamiento físico; la topología de red, el acceso a la misma, la notificación de errores, la formación y entrega ordenada de datos y control de flujo.
 
-Su principal función
+Su principal función es convertir el modo de transmisión en un medio de libre de errores de cualquier tipo, realizando para ello las siguientes funciones:
+
+* Establecer los medios necesarios para una comunicación confiable y eficiente entre 2 máquinas en red.
+* Agregar una secuencia especial de bits al principio y al final de los paquetes de datos, estructurando este flujo bajo un formato predefinido, denominado trama, que suele ser de unos cientos de bytes.
+* Sincronizar el envío de los tramas, transfiriendolos de una forma confiable libre de errores. Para detectar y contratar errores se añaden bits de paridad, se usan CRC (Códigos Cíclicos Redundantes) y envía de acuses de recibo positivos y negativos, y para evitar tramas repetidos se usan números de secuencia en ellas.
+* Controlar la congestión de la red.
+* Regular la veocidad de trafico de datos.
+* Controlar el flujo de tramas mediante protocolos que prohiben que el remitente envíe tramas sin la autorización explícita del receptor, sincronizando así su emisión y recepción.
+* Encargarse el acceso de los datos al medio (soportes físicos de la red)
+
+## Capa 3 (Red)
+
+Proporciona sus servicios a la capa de transporte, siendo una capa compleja que proporciona conectividad y selección de la mejor ruta para la comunicación entre máquinas que pueden estar ubicadas en redes geográficamente distintas.
+
+Es la responsable de las funciones de conmutación y enrutamiento de la información (direccionamiento lógico), proporcionando los procedimientos necesarios que conozca la topología de la red (forma en que están interconectados los nodos), con objeto de determinar la ruta más adecuada.
+
+Las principales funciones son:
+
+* Dividir los mensajes de la capa de transporte (segmentos) en unidades más complejas, denominadas paquetes, a los que asigna las direcciones lógicas de los hosts que se están comunicando.
+* Conocer la topología de la red y manejar
